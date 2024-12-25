@@ -18,33 +18,3 @@ enum ROLE {
   USER
   EDITOR
 }
-
-model User {
-  id              Int       @id @default(autoincrement())
-  name            String
-  email           String    @unique
-  password        String
-  role            ROLE      @default(USER) 
-  profilePicture  String?   
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
-  bio             String?   
-  preferredLang   String?  
-  isActive        Boolean   @default(true) 
-  resetToken      String?   
-  resetTokenExp   DateTime? 
-  documents       Document[] 
-  favorites       Document[] @relation("UserFavorites") 
-}
-
-model Document {
-  id Int @id @default(autoincrement())
-  title String
-  content String
-  language String
-  authorId Int
-  author User @relation(fields: [authorId], references: [id])
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  favorites User[] @relation("UserFavorites")
-}
