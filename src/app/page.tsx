@@ -1,8 +1,9 @@
+import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { Button } from "@/components/ui/button";
 import GridPattern from "@/components/ui/grid-pattern";
 import IconCloud from "@/components/ui/icon-cloud";
 import { cn } from "@/lib/utils";
-import { slugs } from "@/utils/slugsPrograming";
+import { slugs } from "@/utils/slugItem";
 import Link from "next/link";
 
 export default function Home() {
@@ -16,7 +17,15 @@ export default function Home() {
 
             <div className="grid grid-cols-1 items-center justify-center md:grid-cols-2 gap-12">
               <div className="flex flex-col gap-6 md:order-2 lg:px-8 pt-6">
-                <h1 className="text-transparent sm:p-2 bg-clip-text inline-block bg-gradient-to-b from-[#121212] to-[#555] dark:from-zinc-100 dark:to-[#b3b2b2] text-6xl xl:text-7xl tracking-tighter font-bold ">LangDocs Language Docs</h1>
+                <div className="flex flex-col">
+                  <AnimatedGradientText>
+                    🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
+                    <span className={cn( `inline animate-gradient bg-gradient-to-r dark:from-[#121212] dark:via-zinc-100 dark:to-zinc-300 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,)}> 
+                      New Version 1.0.0
+                    </span>
+                  </AnimatedGradientText>
+                  <h1 className="text-transparent sm:p-2 bg-clip-text inline-block bg-gradient-to-b from-[#121212] to-[#555] dark:from-zinc-100 dark:to-[#b3b2b2] text-6xl xl:text-7xl tracking-tighter font-bold ">LangDocs Language Docs</h1>
+                </div>
                 <p className="max-w-3xl flex text-[15px] text-pretty leading-relaxed text-sm lg:text-lg text-[#505050] dark:text-[#b3b2b2]">
                   Stay ahead with up-to-date, multilingual resources, offering comprehensive documentation, tutorials, and examples across various programming languages. Whether you&apos;re a beginner or experienced developer
                 </p>
