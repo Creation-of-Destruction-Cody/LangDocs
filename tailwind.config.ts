@@ -10,9 +10,6 @@ export default {
     ],
     theme: {
         extend: {
-			backgroundImage: {
-				'text-gradient': 'linear-gradient(180deg, #fff, #adadad)',
-			},
 			fontFamily: {
 				sans: [
 				  '"Geist"', 

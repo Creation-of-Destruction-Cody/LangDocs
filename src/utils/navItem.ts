@@ -3,32 +3,32 @@ import { NavbarItem } from "@/types";
 export const NavItems: NavbarItem[] = [
     {
         id: 1,
-        title: "Showcase",
-        href: "/showcase",
+        title: "soon...",
+        href: "/soon...",
     },
     {
         id: 2,
-        title: "Docs",
-        href: "/docs",
+        title: "soon...",
+        href: "/soon...",
     },
     {
         id: 3,
-        title: "DocsCo",
-        href: "/docsCo",
+        title: "soon...",
+        href: "/soon...",
     },
     {
         id: 4,
-        title: "Blog",
-        href: "/blog",
+        title: "soon...",
+        href: "/soon...",
     },
     {
         id: 5,
-        title: "Templates",
-        href: "/templates",
+        title: "soon...",
+        href: "/soon...",
     },
     {
         id: 6,
-        title: "Components",
-        href: "/components",
+        title: "soon...",
+        href: "/soon...",
     },
 ]

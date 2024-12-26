@@ -84,8 +84,8 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="border-b sticky top-0 border-dotted border-[#121212]/15 dark:border-white/15 z-10">
-                <header className="container items-center mx-auto p-3 border-l border-dotted border-r  border-[#121212]/15 dark:border-white/15">
+            <div className="sticky top-0 border-dotted border-[#121212]/15 dark:border-white/15 z-10">
+                <header className="container items-center mx-auto p-3 border-l border-b border-dotted border-r  border-[#121212]/15 dark:border-white/15">
                     <nav className="relative flex justify-between items-center gap-3">
                         <Link href={"/"} className="flex items-center gap-4">
                             {NavbarLogo}
