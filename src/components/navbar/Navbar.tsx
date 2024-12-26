@@ -79,11 +79,11 @@ export default function Navbar() {
         return  (
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size={"icon"} className={`${style} bg-transparent items-center justify-center ${isDarkMode ? '' : 'hover:bg-[#121212f]/5'}`} >
+                    <Button variant="ghost" size={"icon"} className={`${style} bg-transparent items-center justify-center`} >
                         {selectedLanguageIcon}
                     </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-[#121212]">
+                <DropdownMenuContent className="bg-zinc-100 dark:bg-[#121212]">
                     <DropdownMenuRadioGroup value={selectedFlag} onValueChange={setSelectedFlag} className="flex flex-col">
                         {Languages.map((e) => (
                             <DropdownMenuRadioItem value={e.code} key={e.id} className="flex justify-start items-center gap-3">
@@ -98,8 +98,8 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="sticky top-0 border-dotted border-[#121212]/15 dark:border-white/15 z-10">
-                <header className="container items-center mx-auto p-3 border-l border-b border-dotted border-r  border-[#121212]/15 dark:border-white/15">
+            <div className="sticky top-0 border-dotted  border-[#121212]/15 dark:border-white/15 z-10">
+                <header className="container items-center mx-auto p-3 border-l border-b dark:bg-[#121212] bg-zinc-200 border-dotted border-r  border-[#121212]/15 dark:border-white/15">
                     <nav className="relative flex justify-between items-center gap-3">
                         <Link href={"/"} className="flex items-center gap-4">
                             {NavbarLogo}
@@ -113,7 +113,7 @@ export default function Navbar() {
                                 <Link key={e.id} href={e.href} className={`transition-colors duration-300 ease-in-out text-sm rounded-md font-semibold 
                             ${isActive(e.href)
                                         ? "text-[#121212] dark:text-[#fff] font-bold"
-                                        : "text-[#666] dark:text-[#888] hover:text-[#121212] dark:hover:text-[#fff]"
+                                        : "text-[#666] dark:text-[#888] hover:text-[#121212] dark:hover:text-zinc-100"
                                     } relative`}>
                                     {e.title}
                                 </Link>
