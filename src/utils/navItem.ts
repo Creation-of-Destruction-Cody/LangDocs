@@ -3,26 +3,31 @@ import { NavbarItem } from "@/types";
 export const NavItems: NavbarItem[] = [
     {
         id: 1,
+        title: "Showcase",
+        href: "/showcase",
+    },
+    {
+        id: 2,
         title: "Docs",
         href: "/docs",
     },
     {
-        id: 2,
+        id: 3,
         title: "DocsCo",
         href: "/docsCo",
     },
     {
-        id: 3,
+        id: 4,
         title: "Blog",
         href: "/blog",
     },
     {
-        id: 4,
+        id: 5,
         title: "Templates",
         href: "/templates",
     },
     {
-        id: 5,
+        id: 6,
         title: "Components",
         href: "/components",
     },

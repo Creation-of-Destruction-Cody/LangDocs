@@ -52,13 +52,13 @@ export default function Navbar() {
 
     return (
         <>
-        <div className="border-b sticky top-0 border-dotted border-[#000]/15 dark:border-white/15 z-10">
-            <header className="container items-center mx-auto p-3 border-l border-dotted border-r  border-[#000]/15 dark:border-white/15">
+        <div className="border-b sticky top-0 border-dotted border-[#121212]/15 dark:border-white/15 z-10">
+            <header className="container items-center mx-auto p-3 border-l border-dotted border-r  border-[#121212]/15 dark:border-white/15">
                 <nav className="relative flex justify-between items-center">
                     <Link href={"/"} className="flex items-center gap-4">
                         {NavbarLogo}
-                        <div className="h-6 w-0.5 bg-[#000]/50 rotate-12 dark:bg-white/50" />
-                        <h2 className="font-bold uppercase text-xl text-pretty leading-relaxed text-[#000] dark:text-zinc-200">
+                        <div className="h-6 w-0.5 bg-[#121212]/50 rotate-12 dark:bg-white/50" />
+                        <h2 className="font-bold uppercase text-xl text-pretty leading-relaxed text-[#121212] dark:text-zinc-200">
                             Lang.<span className="capitalize text-xs dark:text-white/75">Docs</span>
                         </h2>
                     </Link>
@@ -66,29 +66,29 @@ export default function Navbar() {
                         {NavItems.map((e) => (
                             <Link key={e.id} href={e.href} className={`transition-colors duration-300 ease-in-out text-sm rounded-md font-semibold 
                             ${isActive(e.href)
-                                    ? "text-[#000] dark:text-[#fff] font-bold"
-                                    : "text-[#666] dark:text-[#888] hover:text-[#000] dark:hover:text-[#fff]"
+                                    ? "text-[#121212] dark:text-[#fff] font-bold"
+                                    : "text-[#666] dark:text-[#888] hover:text-[#121212] dark:hover:text-[#fff]"
                                 } relative`}>
                                 {e.title}
                             </Link>
                         ))}
                     </div>
                     <div className="flex items-center">
-                        <Button variant="ghost" size="icon" onClick={toggleMenu} className={`flex md:hidden bg-transparent ${isDarkMode ? '' : 'hover:bg-[#000f]/5'}`}>
+                        <Button variant="ghost" size="icon" onClick={toggleMenu} className={`flex md:hidden bg-transparent ${isDarkMode ? '' : 'hover:bg-[#121212f]/5'}`}>
                             {isOpen ? <X /> : <Menu />}
                         </Button>
-                        <Button asChild variant="ghost" size="icon" className={`bg-transparent hidden md:flex  ${isDarkMode ? '' : 'hover:bg-[#000]/5'}`}>
+                        <Button asChild variant="ghost" size="icon" className={`bg-transparent hidden md:flex  ${isDarkMode ? '' : 'hover:bg-[#121212]/5'}`}>
                             <Link href={"https://discord.gg/f85Eybah"}><Discord /></Link>
                         </Button>
-                        <Button asChild variant="ghost" size="icon" className={`bg-transparent hidden md:flex ${isDarkMode ? '' : 'hover:bg-[#000]/5'}`}>
+                        <Button asChild variant="ghost" size="icon" className={`bg-transparent hidden md:flex ${isDarkMode ? '' : 'hover:bg-[#121212]/5'}`}>
                             <Link href={"https://github.com/Creation-of-Destruction-Cody/LangDocs"}><Github /></Link>
                         </Button>
-                        <Button variant="ghost" size="icon" className={`bg-transparent hidden md:flex ${isDarkMode ? '' : 'hover:bg-[#000]/5'}`} onClick={() => setTheme(isDarkMode ? 'light' : 'dark')}>
+                        <Button variant="ghost" size="icon" className={`bg-transparent hidden md:flex ${isDarkMode ? '' : 'hover:bg-[#121212]/5'}`} onClick={() => setTheme(isDarkMode ? 'light' : 'dark')}>
                             <Icon />
                         </Button>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" size={"icon"} className={`hidden md:flex bg-transparent items-center justify-center ${isDarkMode ? '' : 'hover:bg-[#000f]/5'}`} >
+                                <Button variant="ghost" size={"icon"} className={`hidden md:flex bg-transparent items-center justify-center ${isDarkMode ? '' : 'hover:bg-[#121212f]/5'}`} >
                                     {selectedLanguageIcon}
                                 </Button>
                             </DropdownMenuTrigger>
@@ -108,11 +108,11 @@ export default function Navbar() {
             </header>
         </div>
         <Drawer open={isOpen} onOpenChange={toggleMenu} >
-            <DrawerContent className="flex justify-start items-start">
+            <DrawerContent className="flex justify-start items-start text-[#121212] dark:bg-[#121212] dark:text-zinc-100">
                 <DrawerHeader>
                     <div className="flex items-center gap-4">
                         {NavbarLogo}
-                        <div className="h-6 w-0.5 bg-[#000]/50 rotate-12 dark:bg-white/50" />
+                        <div className="h-6 w-0.5 bg-[#121212]/50 rotate-12 dark:bg-white/50" />
                         <DrawerTitle>Lang.<span className="capitalize text-xs dark:text-white/75">Docs</span></DrawerTitle>
                     </div>
                 </DrawerHeader>
@@ -127,18 +127,18 @@ export default function Navbar() {
                 </div>
                 <DrawerFooter>
                 <div className="flex items-center">
-                        <Button asChild variant="ghost" size="icon" className={`bg-transparent  ${isDarkMode ? '' : 'hover:bg-[#000]/5'}`}>
+                        <Button asChild variant="ghost" size="icon" className={`bg-transparent  ${isDarkMode ? '' : 'hover:bg-[#121212]/5'}`}>
                             <Link href={"https://discord.gg/f85Eybah"}><Discord /></Link>
                         </Button>
-                        <Button asChild variant="ghost" size="icon" className={`bg-transparent ${isDarkMode ? '' : 'hover:bg-[#000]/5'}`}>
+                        <Button asChild variant="ghost" size="icon" className={`bg-transparent ${isDarkMode ? '' : 'hover:bg-[#121212]/5'}`}>
                             <Link href={"https://github.com/Creation-of-Destruction-Cody/LangDocs"}><Github /></Link>
                         </Button>
-                        <Button variant="ghost" size="icon" className={`bg-transparent ${isDarkMode ? '' : 'hover:bg-[#000]/5'}`} onClick={() => setTheme(isDarkMode ? 'light' : 'dark')}>
+                        <Button variant="ghost" size="icon" className={`bg-transparent ${isDarkMode ? '' : 'hover:bg-[#121212]/5'}`} onClick={() => setTheme(isDarkMode ? 'light' : 'dark')}>
                             <Icon />
                         </Button>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" size={"icon"} className={`bg-transparent items-center justify-center ${isDarkMode ? '' : 'hover:bg-[#000f]/5'}`} >
+                                <Button variant="ghost" size={"icon"} className={`bg-transparent items-center justify-center ${isDarkMode ? '' : 'hover:bg-[#121212f]/5'}`} >
                                     {selectedLanguageIcon}
                                 </Button>
                             </DropdownMenuTrigger>
