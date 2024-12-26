@@ -37,9 +37,21 @@ export default function Navbar() {
     const [selectedFlag, setSelectedFlag] = useState("en-EN");
     const [expanded, setExpanded] = useState(false);
     const [mounted, setMounted] = useState(false);
-
-
     const pathname = usePathname();
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setExpanded(false);
+            }
+        };
+        window.addEventListener("resize", handleResize);
+    
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         setMounted(true);
@@ -49,7 +61,9 @@ export default function Navbar() {
         return null;
     }
 
+
     const isOpen = expanded;
+    
     const toggleMenu = () => setExpanded((prev) => !prev);
 
     const selectedLanguageIcon = Languages.find(
