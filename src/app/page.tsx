@@ -20,14 +20,14 @@ export default function Home() {
                 <div className="flex flex-col gap-3">
                   <div className="flex flex-col sm:flex-row gap-3 w-fit mx-auto">
                     <AnimatedGradientText>
-                      🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
-                      <span className={cn( `inline animate-gradient bg-gradient-to-r dark:from-[#121212] dark:via-zinc-100 dark:to-zinc-300 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,)}> 
+                      🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-[#121212] dark:bg-gray-300" />{" "}
+                      <span className={cn( `inline animate-gradient bg-gradient-to-r from-[#121212] via-[#2c2c2c] to-[#555]  dark:from-[#121212] dark:via-zinc-100 dark:to-zinc-300 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,)}> 
                         New Version 1.0.0
                       </span>
                     </AnimatedGradientText>
                     <AnimatedGradientText>
-                      👨🏻‍💻 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
-                      <span className={cn( `inline animate-gradient bg-gradient-to-r dark:from-[#121212] dark:via-zinc-100 dark:to-zinc-300 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,)}> 
+                      👨🏻‍💻 <hr className="mx-2 h-4 w-px shrink-0 bg-[#121212] dark:bg-gray-300" />{" "}
+                      <span className={cn( `inline animate-gradient bg-gradient-to-r from-[#121212] via-[#2c2c2c] to-[#555]  dark:from-[#121212] dark:via-zinc-100 dark:to-zinc-300 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,)}>
                         Users: 0
                       </span>
                     </AnimatedGradientText>
